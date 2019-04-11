@@ -10,10 +10,14 @@ CFLAGS=-Wall -std=c++14
 # Como en python, es importante la identación
 # Evitar ambigüedad
 
-all: ejemplo1
-	@echo "Creacion finalizada"
+all: ejemplo1 ejemplo2
+	@echo "Todos los ejercicios han sido generados"
 
 # ${var} será la syntax para que el programa reemplace según corresponda
 ejemplo1:
 	@${CC} ${CFLAGS} -o ej1 ejemplo1.cpp 
 	@echo "ej1 generado"
+
+ejemplo2:
+	@${CC} ${CFLAGS} -o ej2 ejemplo2.cpp 
+	@echo "ej2 generado"
