@@ -1,0 +1,8 @@
+Ambos ejercicios, fuera del enunciado, deberán seguir la estructura de los códigos plantilla ejemplo1.cpp y ejemplo2.cpp. Se trabaja el uso de punteros, y estructuras (con sub-estructuras y funciones).
+
+Ejercicio 1:
+	El programa debe generar N_P palabras (cadena de caracteres alfabéticos minúsculos) de largo N_C, y para cada palabra, deberá contar la cantidad de vocales y consonantes presentes, y guardar los resultados correspondientes en dos listas de largo N_P (c_con, c_voc), es decir, con un espacio para cada palabra.
+	
+Ejercicio 2:
+	El programa debe realizar un torneo de Piedra, Papel o Tijeras, donde cada jugador genera previamente sus N_C jugadas favoritas a ocupar en todo el torneo, las cuales son modificadas en caso de empate. La cantidad de jugadores N_J estará dada por la cantidad de rondas deseadas N_R, siendo una potencia de dos para asegurar simetría (2^{N_R}), y tanto N_R como N_C deberán ser entregadas al programa en su ejecución: ./ej2 {N_R} {N_C}
+	
