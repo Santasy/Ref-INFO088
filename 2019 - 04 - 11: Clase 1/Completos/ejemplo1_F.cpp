@@ -51,8 +51,8 @@ void genPalabras(char **palabras){
 void contar(char *pointer, int *c_voc, int *c_con){
     for(int i = 0; i < N_P; i++, pointer++){
         c_voc[i] = c_con[i] = 0;
-        bool found = false;
         for(int j = 0; j < N_C; j++, pointer++){
+            bool found = false;
             for(int k = 0; k < 5; k++){
                 if(*pointer == vocales[k]){
                     found = true;
