@@ -35,7 +35,7 @@ struct torneo{
 	/* Atributos */
 	int premio = 0, ronda = 1;
 	jugador *restantes = new jugador[N_J],
-					*siguiente = new jugador[N_J / 2];
+		*siguiente = new jugador[N_J / 2];
 
 	/* Funciones */
 	void generarJugadores(){
@@ -53,7 +53,7 @@ struct torneo{
 		do{
 			jugarRonda();
 		}while(ronda <= N_R);
-
+		//La logica del programa asegura que el único jugar restante por jugar, es en realidad el ganador
 		cout << "El jugador " << restantes[0].id << " ha ganado el premio de $" << premio << endl << endl;
 	}
 
