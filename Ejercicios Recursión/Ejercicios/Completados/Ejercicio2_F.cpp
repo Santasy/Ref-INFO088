@@ -1,26 +1,26 @@
 #include <iostream>
-/* Para usuarios de Windows:*/
+/* Para usuarios de Windows:
 #include <ctime>
 #include <stdlib.h>
-
+*/
 
 using namespace std;
 
-#define N_C 30 //Número de cálculos a almacenar
+#define N_C 30 //NÃºmero de cÃ¡lculos a almacenar
 
 double fibonacci(int i, double *calculados, int *calculos);
 void printAll(double *calculados);
 
 int main(int argc, char **argv){
 	srand(time(NULL));
-	cout.precision(0); // Fija la cantidad de indices decimales a imprimir a través de std::cout a 0, asegurando que el número entero imprima todos sus dígitos.
-	// Para que funcione, se debe entregar '<< fixed' antes de entregar el número '<< n'
+	cout.precision(0); // Fija la cantidad de indices decimales a imprimir a travÃ©s de std::cout a 0, asegurando que el nÃºmero entero imprima todos sus dÃ­gitos.
+	// Para que funcione, se debe entregar '<< fixed' antes de entregar el nÃºmero '<< n'
 	
-	int calculos = 0; // Contador de cálculos necesitados durante la ejecución del programa
-	double *calculados = new double[N_C]{0, 1, 1}; // Nos ahorramos los primeros cálculos, que son un poco más tedioso de generar.
+	int calculos = 0; // Contador de cÃ¡lculos necesitados durante la ejecuciÃ³n del programa
+	double *calculados = new double[N_C]{0, 1, 1}; // Nos ahorramos los primeros cÃ¡lculos, que son un poco mÃ¡s tedioso de generar.
 	
-	// Esta es una técnica lógica simple, que nos permiten crear condiciones para el avance de nuestro programa
-	for(int i = 3; i < N_C; i++) calculados[i] = -1; // Definimos que si la casilla contiene un '-1', significará que el valor no ha sido calculado.
+	// Esta es una tÃ©cnica lÃ³gica simple, que nos permiten crear condiciones para el avance de nuestro programa
+	for(int i = 3; i < N_C; i++) calculados[i] = -1; // Definimos que si la casilla contiene un '-1', significarÃ¡ que el valor no ha sido calculado.
 	
 	/* Llamdos triviales a la funcion */
 	for(int i = 0; i < 10; i++){
@@ -35,9 +35,9 @@ int main(int argc, char **argv){
 }
 
 double fibonacci(int i, double *calculados, int *calculos){
-	/* Función que entrega el número en índice 'i' de la serie de Fibonacci */
+	/* FunciÃ³n que entrega el nÃºmero en Ã­ndice 'i' de la serie de Fibonacci */
 	
-	if(i >= 0 && i < N_C){ //Si es que está dentro de los rangos de la lista
+	if(i >= 0 && i < N_C){ //Si es que estÃ¡ dentro de los rangos de la lista
 		if(calculados[i] == -1){ //Si es que no se ha almacenado anteriormente, se calcula
 			calculados[i] = fibonacci(i - 1, calculados, calculos) + fibonacci(i - 2, calculados, calculos);
 			(*calculos)++;
@@ -46,7 +46,7 @@ double fibonacci(int i, double *calculados, int *calculos){
 	}
 	// Recordar lo trivial del else
 	
-	// Ahora se manejan las búsquedas fueras de nuestra lista existente.
+	// Ahora se manejan las bÃºsquedas fueras de nuestra lista existente.
 	return fibonacci(i - 1, calculados, calculos) + fibonacci(i - 2, calculados, calculos);
 }
 
