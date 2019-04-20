@@ -1,0 +1,9 @@
+
+Ejercicio 1:
+	- Defina la función recursiva fibonacci(), de manera que los valores ya calculados se guardan en un arreglo, y se utilizan en el cálculo de los dígitos posteriores.
+	- Solo debe aceptar búsquedas dentro de los límites de la lista (i < N_C).
+	- Lleve el registro de la cantidad de cálculos nuevos necesitados para todas las llamadas durante el programa.
+	
+Ejercicio 2:
+	- Una vez compilado el ejercicio anterior, makefile realiza una copia para así trabajar en Ejercicio2.cpp
+	- Modifique su código en el ejercicio 1, de manera que la función acepte búsquedas fuera de los límites de la lista, utilizando también los valores almacenados según sea posible.
