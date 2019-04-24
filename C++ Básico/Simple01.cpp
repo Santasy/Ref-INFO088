@@ -15,7 +15,7 @@ int main(){ // Opciones de main: 'main()' ó 'main(int argc, char **argv)'
 	cout << sizeof(float) * 8 << '\n';
 	cout << sizeof(double) * 8 << "\n\n";
 
-	// unigned {tipo} {nombre_variable}: nos permitirá ocupar el bit para el signo
+	// unsigned {tipo} {nombre_variable}: nos permitirá ocupar el bit para el signo
 	cout << "Overflow:\n";
 	cout.precision(0); // Especifica que la salida por 'cout' tenga 0 decimales, forzando también la impresión de todos los dígitos, y no una representación científica (401.24e^18)
  	int x = 2147483647; // == pow(2, 31) - 1;
