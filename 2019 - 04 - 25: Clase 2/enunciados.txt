@@ -1,0 +1,9 @@
+Ejercicio 1:
+	- Definala función recurvisa minCC(),que entregue el mínimo común múltiplo entre dos valores entregados en la ejecución: "./ej1 n1 n2".
+
+Ejercicio 2:
+	- Defina la función recursiva fibonacci(), de manera que los valores ya calculados se guardan en un arreglo, y se utilizan en el cálculo de los dígitos posteriores.
+	- La función debe aceptar búsquedas fuera de los límites de la lista, utilizando también los valores almacenados según sea posible.
+	- Lleve el registro de la cantidad de cálculos nuevos necesitados para todas las llamadas durante el programa.
+
+	
