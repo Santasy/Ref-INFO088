@@ -8,3 +8,7 @@
 ### Simple02: Punteros
 * Punteros dobles (matrices)
 * Punteros triples (matrices de palabras)
+
+### Simple03: Estructuras y autoreferencias
+* Estructuras como listas y punteros
+* Estructuras con referencias a la misma estructura
