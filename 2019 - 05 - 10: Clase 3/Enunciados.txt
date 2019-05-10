@@ -1,0 +1,43 @@
+Ejercicio 1:
+	- Ocupando la estructura 'ficha' y el código ocupado en main, deberá crear una lista de valores aleatorios, y realizar los calculos correspondientes a cada atributo de la ficha, definiendo las funciones correspondientes.
+	- Una vez generada la ficha, deberá imprimir cada ficha haciendo uso del puntero cabecera 'fichas'.
+	- Para la ejecución, se pedirá el número 'n' de fichas a crear, y el incremento de longitud 'inc' para cada ficha, es decir, la primera ficha tendrá longitud 'inc'.
+	- Por lo tanto, la ejecución será de la forma: './ej1 n inc'.
+	- NO DEBE MODIFICAR EL MAIN.
+
+Ejercicio 2:
+	- Ocupando la ya conocida estructura 'nodo', doblemente enlazada, deberá crear un ARREGLO de 'n' nodos, y enlazarlos aleatoriamente comenzando desde el nodo con 'id' = 0.
+	- 'n' será entregado en ejecución ('./ej2 n'), y debe ser positivo.
+	- En enlace no será redireccional necesariamente. Deberá ocupar la función 'popNum()', que entregará el siguiente nodo a ser enlazado, y será llamado '2(n - 1)' veces (una para cada sentido).
+	- Una vez enlazados los nodos, deberá recorrerlos desde la cabeza hacia su siguiente nodo hasta no poder seguir, para después devolverse en sentido contrario (prev).
+	- Observar que no necesariamente el último nodo en visitar será nuestra cabeza original.
+
+-----------
+Desafio 1: Juego de ataque de células
+	- El juego consiste en un ataque por turnos, donde el jugador y el enemigo pueden, ó atacar, ó defenderse, con la energía acumulada disponible.
+	- Cada turno se generará nueva energía para cada jugador.
+	- Primero atacará el jugador, y luego, de estar vivo, el enemigo.
+	- La forma de hacer daño y defenderse simula una onda expansiva que disminuye gradualmente:
+		- Celdas: [3] [2] [1]
+		- Se dañará con 2 de energía a la célula en índice 1 (la [2]).
+		- Ésta recibirá 2 de daño, y dañará las adyacentes, según sea posible (ojo con los nullptr), con 1 menos de daño.
+		- Celdas: [2] [0] [-1]
+		- Toda celda con (hp <= 0), deberá ser eliminada de la lista.
+		- Celdas: [2]
+		- Otro ejemplo:
+		- Celdas: [6] [7] [8] [3]
+		- Se dañará la célula [7] con 7 de energía.
+		- Celdas: [0] [0] [2] [-2]
+		- Celdas: [2] 
+	- Análogamente funcionará la defensa, pero es posible replicar las células si tienen (hp > 10).
+		- Celdas: [8] [9] [1]
+		- Se defenderá con 4 de energía la célula [9].
+		- Celdas: [11] [13] [4]
+		- Observar que dos células pueden replicarse, y lo harán añadiendo células a su derecha.
+		- Celdas: [10] [1] [10] [3] [4]
+		- Observar que las nuevas células tendrán (hp = padre->hp - 10), y las células padre tendrán un máximo de (hp = 10).
+	- Cada inserción o eliminación de células deberá ser correctamente enlazado.
+	- El objetivo del juego será dejar sin células al oponente.
+	- El número de células iniciales será entregado en ejecución ('./des1 n').
+	- Es clave que observe los parámentros entregado a las funciones, y los atributos de cada estructura.
+	- NO DEBE ELIMINAR CÓDIGO YA EXISTENTE. Debe adaptarse a su funcionamiento.
