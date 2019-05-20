@@ -12,3 +12,8 @@
 ### Simple03: Estructuras y autoreferencias
 * Estructuras como listas y punteros
 * Estructuras con referencias a la misma estructura
+
+### Simple04: Clases
+* Encapsulamiento
+* Herencia
+* Polimorfismo
