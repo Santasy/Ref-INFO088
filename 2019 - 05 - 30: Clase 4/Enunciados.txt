@@ -1,0 +1,14 @@
+Ejercicio 1:
+	- Utilizando la estructura de la case 'nodoArbol', complete la definición de sus funciones de manera que:
+		- Acepte repeticiones de solo los números '1' y '2'.
+		- De intentar agregar un número, y encontrarse ya presente, debe llamar a la función 'genSumadores()', que descompone el número en los dós ÚNICOS primeros números enteros cercanos al centro, distintos entre sí, y cuya suma completa el número de vuelta.
+			- Ejemplo: 5 como número repetido:
+					la mitad será 2.5, y los sumandos serán a 3 y 2.
+			- Ejemplo: 6 como número repetido:
+					la mitad será 3, y los sumandos serán 4 y 2.
+			- Ésto puede ocurrir en cadena:
+					6 como repetido se descompone en 4 y 2, pero el 4 también está repetido.
+					4 se descompondrá en 3 y 1.
+					Es decir, el árbol deberá agregar los valores {2}, {3, 1}.
+		- La función 'printArbol()' deberá imprimir los nodos en orden ascendente.
+			- De ser los nodos cuyo valor son 1 ó 2, deberá imprimir su cantidad de repeticiones.
