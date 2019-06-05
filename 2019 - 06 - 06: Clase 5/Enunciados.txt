@@ -1,0 +1,34 @@
+Ejercicio 1:
+	Ocupando la cola 'ingreso' y la pila 'p', deberá obtener todos los carácteres de la cola, e ir procesando cada caracter según las siguientes reglas:
+	- 'a': Sea 'currNum' un contador, deberá agregar la sucesión 'currNum', 'currNum + 1' y 'currNum + 2' a la pila. Debe ir aumentando el contador.
+	- 'm': Deberá resumir la mitad superior de pila (mitad = floor(p.size() / 2.0)) en solo un número, que finalmente deberá ser añadido a la pila.
+	- 'r': Deberá revertir el sentido de la pila (el top queda en el fondo).
+	- 's': Sumará 1 a todos los valores en la pila.
+	- 'c': Deberá añadir los carácteres 'a', 's', 'r' y 'v' a la cola.
+	- Cualquier otro, deberá imprimir ambos objetos (la pila y la cola).
+
+	Para ésto, deberá completar TODO el código que encuentre necesario en los '.cpp' (incluyendo el main). Es clave que revise la estructura del main, tanto como los archivos '.h'.
+	Procure que el formato de impresión del 'Ejemplo de ejecución' coincida con el suyo.
+
+	La ejecución del programa será './ej1 palabra', donde 'palabra' es una sucesión de carácteres de al menos un caracter.
+
+	Ejemplo de ejecución (debe conseguir este output):
+		* Input: 
+			vaassrmv
+		* Output:
+			Cola: <-a a s s r m v <-
+			Pila vacía.
+			----------
+			Cola vacía.
+			Pila: <-9 5 6 7 ]
+			----------
+	Otro:
+		* Input: 
+				vacssasmrams
+		* Output:
+				Cola: <-a c s s a s m r a m s <-
+				Pila vacía.
+				----------
+				Cola vacía.
+				Pila: <-17 7 6 5 23 10 11 12 ]
+				----------
