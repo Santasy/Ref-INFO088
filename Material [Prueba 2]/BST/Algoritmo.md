@@ -1,0 +1,31 @@
+\[Funcionalidades\]:
+\
+**Búsqueda**: Se trabajará con dos tipos de búsqueda:
+	* **De nodo**, que buscará el nodo padre correspondiente al valor entregado, que tendrá una conexión disponible para integrar el valor. La respusta debe ser 'nullptr' en caso de que la cabeza lo sea, para explicar que el árbol está vacío.
+	* **De valor**, que simplemente buscará un valor entregado entre los almacenados por el árbol. La respuesta debe ser un valor booleano. 
+	* Para ambos, se deberá recorrer el árbol de acuerdo a la función de comparación.
+\
+**Inserción**: Dado que la cabeza del árbol puede ser un 'nullptr', pueden darse dos casos:
+	* La cabeza es 'nullptr', por lo que debe ser reemplazado por el nuevo nodo.
+	* La cabeza no es 'nullptr', por lo que debe buscarse una posición libre:
+		- Se busca un nodo disponible con la función correspondiente.
+		- Se agrega la conexión, y el nodo nuevo pasa a ser hoja del árbol.
+\
+**Eliminación**: Dado que no se busca que este árbol esté balanceado, este proceso es bastante simplificado, y pueden darse tres casos:
+	* El valor no se encuentra, por lo que no es necesario operar.
+	* El valor se encontró, y es una hoja:
+		- Se reemplaza la conexión con el nodo padre con un 'nullptr'.
+		- Se elimina el nodo de la memoria (delete en C++).
+	* El valor se encontró, y no es una hoja:
+		- Se reemplaza la conexión con el nodo padre con un 'nullptr'.
+		- Se elimina el nodo de la memoria (delete en C++).
+		- Ahora, existirán (virtualmente; no están enlazados a nada, y solo existen mientras tengamos su referencia) dos sub-árboles formados por los hijos del nodo eliminado, que deberán ser re-integrados al árbol original, buscando el nodo correcto con la función correspondiente, y:
+			- Primero, se agrega el sub-árbol izquierdo. Esto es porque el sub-árbol derecho puede terminar siendo hijo derecho de alguna hoja del sub-árbol izquierdo.
+			- Segundo, se agrega el sub-árbol derecho.
+	- Para eliminar un árbol, se deben eliminar todos los nodos almacenados.
+\
+**Impresión**: Para este tipo de árbol, binario, es posible recorrerlo recursivamente (es un proceso que trata cada nodo como si fuera raíz) de tres maneras, que son variaciones en el orden del arreglo \[raíz, izquierda, derecha\], y han sido formalmente descritas como:
+	* **Pre-order**: (**raíz**, izquierda, derecha), que imprimirá el valor del nodo evaluado, luego evaluará a la izquierda (se imprimira el valor, y se volverá a ir a la izquierda de ser posible), y terminará evaluando a la derecha (de la misma manera, imprimirá el valor, revisará a la izquierda, y luego continuará a la derecha). Esto resultara en una impresión sin orden numérico, solo evidenciará el orden en que fueron **agregados** los nodos.
+	* **In-order**: (izquierda, **raíz**, derecha), que primero evaluará a la izquierda, luego imprimira el valor, y continuará con la derecha. Gracias a la estructura de nuetro árbol, todo nodo izquierdo será menor que el anterior, por lo que la impresión termina siendo en **orden numérico ascendente**.
+	* **Post-order**: (izquierda, derecha, **raíz**), que primero evaluará a la izquierda, luego a la derecha, y luego imprimirá la raíz. Esta impresión tampoco evidencia un orden numérico particular, es decir, solo evidencia el orden en que las hojas escalan hasta la raíz, que referencia un poco al concepto de **niveles**.
+	- Para identificar qué tipo de valor (par, impar, primo) se almacena en el árbol, deberán tener contadores internos que funcionen adecuadamente.
