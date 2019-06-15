@@ -13,6 +13,7 @@ La gracia es que este último archivo solo sea revisado en \[2\] casos:
 También, este archivo explicará, enumeradamente, los procedimientos empezando con los que requieren menos operaciones.
 
 Revise además la estructura del makefile, que trabaja con un problema distribuído en varios archivos.
+
 No existirá código de solución.
 
 **Reflexión:** No se conforme con su conocimiento; revise también el archivo, a pesar de que su programa funcione.
