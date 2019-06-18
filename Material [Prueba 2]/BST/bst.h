@@ -14,7 +14,7 @@ class bst{
 			*der = nullptr;
 	};
 
-	nBST **root = nullptr;
+	nBST **root = nullptr; // Cabeza
 		// No pueden ser llamadas por el usuario:
 	void preO(nBST *nodo);
 	void inO(nBST *nodo);
@@ -25,7 +25,7 @@ public:
 	bool searchVal(int val);
 	nBST *searchNode(int val); // Retorna un puntero
 	bool insertVal(int val);
-	bool deleteval(int val);
+	bool deleteVal(int val);
 	
 	/* Impresión: */
 	void preOroot();
